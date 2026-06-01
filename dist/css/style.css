@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+.container {
+    width: 80%;
+    margin-inline: auto;
+}
+
+@media (max-width: 992px) {
+    .container {
+        width:90%
+    }
+}
+
+/* Navbar */
+.navbar {
+    padding: 20px 0 20px 0;
+}
+
+.navbar-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-box .menu {
+    display: flex;
+    gap: 50px;
+}
+
+.navbar-box .menu li {
+    list-style-type: none;
+}
+
+.navbar-box .menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.navbar-box .menu li a:hover {
+    border-bottom: 3px solid rebeccapurple;
+}
+
+.navbar-box .ri-menu-3-line{
+    display: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .navbar-box .menu {
+        /* display: none; */
+        position: absolute;
+        top: -100%;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: column;
+        text-align: center;
+        background-color: rebeccapurple;
+        width: 100%;
+        padding: 40px 0 40px 0;
+        transition: all 0.2s ease-in-out;
+        opacity: 0;
+    }
+
+    .navbar-box .menu.menu-active {
+        top: 100px;
+        opacity: 1;
+    }
+
+    .navbar-box .menu li a {
+        color: white;
+        font-size: 20px;
+        text-decoration: underline;
+    }
+
+    .navbar-box .ri-menu-3-line {
+        display: block;
+    }
+}
+
+/* Hero */
+.hero {
+    padding-top: 60px;
+}
+
+.hero-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.hero-box h1{
+    font-size: 54px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: rebeccapurple;
+}
+
+.hero-box p {
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.hero-box a {
+    text-decoration: none;
+    background-color: rebeccapurple;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+}
+
+.hero-box a:hover {
+    background-color: black;
+}
+
+.hero-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+    .hero-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 70px;
+    }
+}
+
+/* Layanan */
+.layanan {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.layanan-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}   
+
+.layanan-box .box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    /* text-align: center; */
+}
+
+.layanan-box .box:hover {
+    background-color: rebeccapurple;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.layanan-box .box:hover > * {
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.layanan-box .box i {
+    color: rebeccapurple;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.layanan-box .box h2 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 992px) {
+    .layanan-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .layanan-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+.produk {
+    /* padding-top: 150px; */
+    padding-bottom: 150px;
+}
+
+.produk-box h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.produk-box ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.produk-box ul li {
+    list-style-type: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    /* text-align: center; */
+    cursor: pointer;
+}
+
+.produk-box ul li.active {
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.produk-box .produk-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.produk-box .produk-list img {
+    width: 250px;
+    height: 200px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.produk-box .produk-list img:hover {
+    background-color: rebeccapurple;
+    transform: scale(1.05);
+}
+
+@media (max-width: 640px) {
+    .produk-box .produk-list img {
+        width: 200px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 475px) {
+    .produk-box .produk-list img {
+        width: 150px;
+        height: 100px;
+    }
+}
+
+.footer {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer p span {
+    font-weight: bold;
+    color: rebeccapurple;
+}
+
+.footer .box:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer .box i {
+    cursor: pointer;
+}
+
+.pointer .box i:hover {
+    color: rebeccapurple;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        gap: 20px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+
+    .footer .box:nth-child(2) {
+        gap: 10px;
+    }
+}
